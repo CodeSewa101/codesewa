@@ -14,6 +14,7 @@ function App() {
         </a>
       </div>
       <h1>Code Sewa ❤️</h1>
+      <p>Under Construction 🚧</p>
     </>
   );
 }
