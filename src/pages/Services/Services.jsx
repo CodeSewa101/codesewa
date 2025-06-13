@@ -3,6 +3,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { FiCode } from "react-icons/fi";
 import { MdMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 import ServicesSection from "./ServicesSection";
+import heroImage from "../../assets/images/Services.jpg";
 
 // ✅ HERO COMPONENT
 const HeroPage = () => {
@@ -26,11 +27,13 @@ const HeroPage = () => {
         </div>
       </div>
 
-      {/* Right Side Image */}
+        {/* Right Side Image */}
       <div className="flex-1 max-w-xs md:max-w-md flex justify-center">
-        <div className="w-full h-64 bg-blue-800 rounded-lg flex items-center justify-center shadow-2xl">
-          <span className="text-white text-lg">Your Image Here</span>
-        </div>
+        <img 
+          src={heroImage} 
+          alt="Project and Software Solutions" 
+          className="w-full h-auto object-contain rounded-lg shadow-2xl"
+        />
       </div>
     </div>
   );
