@@ -27,13 +27,19 @@ const HeroPage = () => {
         </div>
       </div>
 
-        {/* Right Side Image */}
-      <div className="flex-1 max-w-xs md:max-w-md flex justify-center">
-        <img 
-          src={heroImage} 
-          alt="Project and Software Solutions" 
-          className="w-full h-auto object-contain rounded-lg shadow-2xl"
-        />
+      {/* Right Side Image - Improved */}
+      <div className="flex-1 flex justify-center items-center">
+        <div className="relative w-full max-w-md">
+          <img 
+            src={heroImage} 
+            alt="Project and Software Solutions" 
+            className="w-full h-auto object-cover rounded-lg shadow-2xl transform transition-all duration-500 hover:scale-105"
+            loading="lazy"
+          />
+          {/* Decorative elements */}
+          <div className="absolute -z-10 w-full h-full bg-blue-600 rounded-lg -bottom-3 -right-3"></div>
+          <div className="absolute -z-20 w-full h-full bg-blue-400 rounded-lg -bottom-6 -right-6 opacity-30"></div>
+        </div>
       </div>
     </div>
   );
