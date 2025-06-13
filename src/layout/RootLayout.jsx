@@ -5,7 +5,7 @@ function RootLayout() {
   return (
     <div>
       <Navbar />
-      <main className=" w-full h-[80%] flex justify-center text-6xl my-[200px]">
+      <main >
         <Outlet />
       </main>
     </div>
