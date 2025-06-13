@@ -2,6 +2,7 @@ import React from "react";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FiCode } from "react-icons/fi";
 import { MdMiscellaneousServices, MdWorkOutline } from "react-icons/md";
+import ServicesSection from "./ServicesSection";
 
 // ✅ HERO COMPONENT
 const HeroPage = () => {
@@ -75,6 +76,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <ServicesSection/>
     </div>
   );
 };
