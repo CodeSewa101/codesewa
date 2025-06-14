@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ⬅️ Add this line
 
 const Home = () => {
+  const navigate = useNavigate(); // ⬅️ Define navigate inside component
+
   return (
     <div className="bg-gradient-to-r from-indigo-50 via-gray-50 to-indigo-100 min-h-screen flex items-center justify-center px-4 py-16 sm:py-20">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -42,8 +45,11 @@ const Home = () => {
         </ul>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-            Explore Services
+          <button
+            onClick={() => navigate("/project-lab")}
+            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            Project Lab
           </button>
           <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
             Submit Enquiry

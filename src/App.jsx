@@ -12,6 +12,7 @@ import Projects from "./pages/Projects/Projects";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import RootLayout from "./layout/RootLayout";
+import ProjectLab from "./components/sections/ProjectLab/ProjectLab";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+       <Route path="/project-lab" element={<ProjectLab />} />
       </Route>
     )
   );
