@@ -47,7 +47,7 @@ const ProjectLab = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-              Project Lab
+             Our Readymade Project
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
