@@ -28,7 +28,7 @@ const Home = () => {
               onClick={() => navigate("project-lab")}
               className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
-              Project Lab
+              Readymade Projects
             </button>
             <button
               onClick={() => navigate("contact")}

@@ -4,7 +4,6 @@ import heroImage from "../../assets/images/Services.jpg";
 const HeroPage = () => {
   return (
     <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
-      
       {/* Left Text Content */}
       <div className="flex-1 max-w-xl text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold leading-snug mb-4">
@@ -37,7 +36,6 @@ const HeroPage = () => {
           <div className="absolute -z-20 w-full h-full bg-blue-400 rounded-lg -bottom-6 -right-6 opacity-30"></div>
         </div>
       </div>
-
     </div>
   );
 };
