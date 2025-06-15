@@ -15,7 +15,7 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="h-full w-full p-6 bg-white shadow-md rounded-md space-y-4"
+      className="h-full w-full p-6 bg-transparent shadow-md rounded-md space-y-4"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
@@ -106,7 +106,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200 disabled:opacity-50"
+        className="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition duration-200 disabled:opacity-50"
       >
         Submit
       </button>
@@ -116,13 +116,13 @@ function ContactForm() {
 
 function CompanyInfo() {
   return (
-    <div className="h-full w-full p-6 bg-white shadow-md rounded-md space-y-4 lg:w-1/2">
+    <div className="h-full w-full p-6 bg-transparent shadow-md rounded-md space-y-4 lg:w-1/2">
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">
         Contact Details
       </h2>
       <div>
         <h3 className="font-medium text-gray-700">Office Address</h3>
-        <p className="text-gray-600">
+        <p className="text-black font-medium">
           CodeSewa Solutions
           <br /> Hinjilicut, Ganjam
           <br /> Odisha – 761102 India
@@ -130,15 +130,15 @@ function CompanyInfo() {
       </div>
       <div>
         <h3 className="font-medium text-gray-700">Phone</h3>
-        <p className="text-gray-600">+91 86583 54878</p>
+        <p className="text-black font-medium">+91 86583 54878</p>
       </div>
       <div>
         <h3 className="font-medium text-gray-700">Email</h3>
-        <p className="text-gray-600">codesewa.in@gmail.com</p>
+        <p className="text-black font-medium ">codesewa.in@gmail.com</p>
       </div>
       <div>
         <h3 className="font-medium text-gray-700">Working Hours</h3>
-        <p className="text-gray-600">Mon - Fri: 9:00 AM to 6:00 PM</p>
+        <p className="text-black font-medium">Mon - Sat: 9:00 AM to 7:00 PM</p>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ function RootLayout() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="mt-16">
         <Outlet />
         <WhatsAppButton />
       </main>

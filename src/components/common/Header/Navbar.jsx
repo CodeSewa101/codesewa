@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   return (
-    <header className="flex justify-between items-center py-[20px] px-[30px] w-[100%] shadow-custom relative bg-white">
+    <header className="flex justify-between items-center py-[20px] px-[30px] w-[100%] shadow-custom  bg-white fixed top-0  z-50 ">
       <div className="nav-logo  ">
         <img
           src={Logo}
