@@ -280,12 +280,9 @@ const ProjectLab = () => {
             resources and tools
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-white text-blue-600 font-medium rounded-xl shadow-md hover:bg-blue-50 transition-all">
+            {/* <button className="px-6 py-3 bg-white text-blue-600 font-medium rounded-xl shadow-md hover:bg-blue-50 transition-all">
               Get Started
-            </button>
-            <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl shadow-md hover:bg-white/10 transition-all">
-              View Documentation
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
