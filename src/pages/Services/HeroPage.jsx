@@ -1,7 +1,8 @@
 import React from "react";
 import heroImage from "../../assets/images/Services.jpg";
-
+import { useNavigate } from "react-router-dom";
 const HeroPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
       {/* Left Text Content */}
@@ -13,10 +14,10 @@ const HeroPage = () => {
           Transforming Ideas into Reality with Cutting-Edge Technology
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Explore Services
-          </button>
-          <button className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button
+            onClick={() => navigate("/contact")}
+            className="border-2 border-white hover:bg-white hover:text-blue-900 text-white  cursor-pointer font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
             Contact Us
           </button>
         </div>
