@@ -1,61 +1,65 @@
 import React from "react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
+=======
+import { useNavigate } from "react-router-dom"; // ⬅️ Add this line
+import ServicesPage from "../Services/ServicesPage";
+>>>>>>> 38a6b42ea952ed0bcaa6e9e37e8d6d9af071f05a
 
 const Home = () => {
   const navigate = useNavigate(); // ⬅️ Define navigate inside component
 
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-gray-50 to-indigo-100 min-h-screen flex items-center justify-center px-4 py-16 sm:py-20">
-      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-          Your All-in-One Destination <br className="hidden sm:block" />
-          for Academic Projects & <br className="hidden sm:block" />
-          Software Services
-        </h1>
-        
-        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto">
-          From college students to small businesses and institutions — <span className="font-semibold text-indigo-600">CodeSewa</span> provides ready-made projects, custom software, and digital solutions tailored to your sector's needs. Learn, build, and grow with confidence.
-        </p>
-        
-        <ul className="space-y-3 mb-12 mx-auto max-w-xl bg-white/50 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-          <li className="flex items-start">
-            <span className="flex-shrink-0 mt-1 mr-2 text-indigo-600 font-bold">▸</span>
-            <span className="font-bold text-gray-800">
-              Final-Year Projects for Students <span className="font-normal text-sm text-gray-500">(Code + Report + Support)</span>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="flex-shrink-0 mt-1 mr-2 text-indigo-600 font-bold">▸</span>
-            <span className="font-bold text-gray-800">
-              Software Solutions for Schools, Shops, Startups & More
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="flex-shrink-0 mt-1 mr-2 text-indigo-600 font-bold">▸</span>
-            <span className="font-bold text-gray-800">
-              Web & Mobile App Development
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="flex-shrink-0 mt-1 mr-2 text-indigo-600 font-bold">▸</span>
-            <span className="font-bold text-gray-800">
-              Affordable, Scalable & Customizable Tech Services
-            </span>
-          </li>
-        </ul>
-        
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button
-            onClick={() => navigate("/project-lab")}
-            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-          >
-            Project Lab
-          </button>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-            Submit Enquiry
-          </button>
+    <div>
+      <div className="bg-gradient-to-r from-indigo-50 via-gray-50 to-indigo-100 min-h-screen flex items-center justify-center px-4 py-16 sm:py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+            Your All-in-One Destination <br className="hidden sm:block" />
+            for Academic Projects & <br className="hidden sm:block" />
+            Software Services
+          </h1>
+
+          <p className="text-gray-700 text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto">
+            From college students to small businesses and institutions —{" "}
+            <span className="font-semibold text-indigo-600">CodeSewa</span>{" "}
+            provides ready-made projects, custom software, and digital solutions
+            tailored to your sector's needs. Learn, build, and grow with
+            confidence.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+              onClick={() => navigate("project-lab")}
+              className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+            >
+              Readymade Projects
+            </button>
+            <button
+              onClick={() => navigate("contact")}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+            >
+              Submit Enquiry
+            </button>
+          </div>
         </div>
       </div>
+      <ServicesPage />
+      <section className="py-4 pb-10">
+        <center>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Why Choose CodeSewa?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-[80%] mx-auto">
+            CodeSewa is your trusted partner for academic and digital growth. We
+            offer high-quality project development, web and software solutions,
+            and skill-focused internships tailored for students, startups, and
+            institutions. Backed by Udyam (MSME) registration, we ensure
+            affordable, timely, and reliable services that drive real results.
+            Whether it's a final-year project or a digital solution for your
+            business—CodeSewa delivers with excellence.
+          </p>
+        </center>
+      </section>
     </div>
   );
 };
