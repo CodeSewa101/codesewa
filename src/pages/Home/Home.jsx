@@ -1,13 +1,9 @@
 import React from "react";
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
-=======
-import { useNavigate } from "react-router-dom"; // ⬅️ Add this line
 import ServicesPage from "../Services/ServicesPage";
->>>>>>> 38a6b42ea952ed0bcaa6e9e37e8d6d9af071f05a
 
 const Home = () => {
-  const navigate = useNavigate(); // ⬅️ Define navigate inside component
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -43,7 +39,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <ServicesPage />
+
       <section className="py-4 pb-10">
         <center>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

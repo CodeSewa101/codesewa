@@ -11,50 +11,49 @@ function Navbar() {
   };
 
   const closeMenu = () => {
-    // Add a small delay to ensure navigation completes
     setTimeout(() => {
       setIsMenuOpen(false);
     }, 100);
   };
 
   return (
-    <header className="flex justify-between items-center py-[20px] px-[30px] w-[100%] shadow-custom  bg-white fixed top-0  z-50 ">
-      <div className="nav-logo  ">
+    <header className="flex justify-between items-center py-4 px-6 sm:px-8 w-full shadow-custom bg-white fixed top-0 z-50">
+      <div className="nav-logo">
         <img
           src={Logo}
           alt="codesewa logo"
-          className=" max-[450px]:w-[250px] md:w-[280px] lg:w-[300px]"
+          className="w-[180px] sm:w-[220px] md:w-[250px] lg:w-[280px]"
         />
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex gap-4 lg:mr-34">
+      <nav className="hidden md:flex gap-6 lg:gap-8">
         <NavLink
-          className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200"
+          className="text-base lg:text-lg text-gray-800 hover:text-blue-500 transition-colors duration-200"
           to="/"
         >
           Home
         </NavLink>
         <NavLink
-          className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200"
+          className="text-base lg:text-lg text-gray-800 hover:text-blue-500 transition-colors duration-200"
           to="/services"
         >
           Services
         </NavLink>
         <NavLink
-          className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200"
+          className="text-base lg:text-lg text-gray-800 hover:text-blue-500 transition-colors duration-200"
           to="/projects"
         >
           Projects
         </NavLink>
         <NavLink
-          className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200"
+          className="text-base lg:text-lg text-gray-800 hover:text-blue-500 transition-colors duration-200"
           to="/about"
         >
           About
         </NavLink>
         <NavLink
-          className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200"
+          className="text-base lg:text-lg text-gray-800 hover:text-blue-500 transition-colors duration-200"
           to="/contact"
         >
           Contact
@@ -63,64 +62,66 @@ function Navbar() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 z-50 cursor-pointer"
+        className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-50 cursor-pointer"
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
         <span
-          className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
-            isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+          className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
+            isMenuOpen ? "rotate-45 translate-y-2" : ""
           }`}
         ></span>
         <span
-          className={`block w-6 h-0.5 bg-gray-800 transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-0" : ""
+          className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
+            isMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
           }`}
         ></span>
         <span
-          className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
-            isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+          className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
+            isMenuOpen ? "-rotate-45 -translate-y-2" : ""
           }`}
         ></span>
       </button>
 
       {/* Mobile Navigation Menu */}
       <nav
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 transition-all duration-300 ease-in-out z-50 ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`md:hidden fixed top-16 left-0 w-full bg-white shadow-lg border-t border-gray-100 transition-all duration-300 ease-in-out z-40 ${
+          isMenuOpen 
+            ? "opacity-100 visible translate-y-0" 
+            : "opacity-0 invisible -translate-y-2"
         }`}
       >
-        <div className="flex flex-col py-4 px-6 space-y-4">
+        <div className="flex flex-col py-3 px-6 space-y-3">
           <NavLink
-            className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 block"
+            className="text-base text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 px-3 rounded hover:bg-gray-50"
             to="/"
             onClick={closeMenu}
           >
             Home
           </NavLink>
           <NavLink
-            className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 block"
+            className="text-base text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 px-3 rounded hover:bg-gray-50"
             to="/services"
             onClick={closeMenu}
           >
             Services
           </NavLink>
           <NavLink
-            className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 block"
+            className="text-base text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 px-3 rounded hover:bg-gray-50"
             to="/projects"
             onClick={closeMenu}
           >
             Projects
           </NavLink>
           <NavLink
-            className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 block"
+            className="text-base text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 px-3 rounded hover:bg-gray-50"
             to="/about"
             onClick={closeMenu}
           >
             About
           </NavLink>
           <NavLink
-            className="text-[18px] text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 block"
+            className="text-base text-gray-800 hover:text-blue-500 transition-colors duration-200 py-2 px-3 rounded hover:bg-gray-50"
             to="/contact"
             onClick={closeMenu}
           >
@@ -129,8 +130,12 @@ function Navbar() {
         </div>
       </nav>
 
+      {/* Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40" onClick={closeMenu}></div>
+        <div 
+          className="md:hidden fixed inset-0 bg-black bg-opacity-10 z-30" 
+          onClick={closeMenu}
+        ></div>
       )}
     </header>
   );
