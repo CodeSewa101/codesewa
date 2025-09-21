@@ -225,11 +225,6 @@ const ProjectLab = () => {
                       </span>
                     </li>
                   ))}
-                  {items.length > 5 && (
-                    <li className="text-sm text-blue-600 font-medium mt-3">
-                      +{items.length - 5} more projects
-                    </li>
-                  )}
                 </ul>
               </div>
             ))}
